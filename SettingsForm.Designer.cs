@@ -11,14 +11,14 @@ namespace Drive_Extender
         private Button buttonRemoveMapping;
         private Button buttonSelectDriveFolder;
         private TextBox textBoxDriveFolder;
-        // private Label labelConfigJsonPath;
-        // private TextBox textBoxConfigJsonPath;
-        // private Button buttonSelectConfigJsonPath;
-        // private Button buttonCreateDefaultConfig;
+        private Button buttonSaveOpenTab;
         private PictureBox pictureBoxPathStatus;
         private Label labelDrivePath;
+        private Label labelConfigJsonPath;
+        private TextBox textBoxConfigJsonPath;
+        private Button buttonSelectConfigJsonPath;
         private Panel panelSeparator;
-        private Button buttonSaveOpenTab;
+        private Button buttonCreateDefaultConfig;
 
         protected override void Dispose(bool disposing)
         {
@@ -41,13 +41,13 @@ namespace Drive_Extender
             buttonRemoveMapping = new Button();
             tabDriveSettings = new TabPage();
             panelSeparator = new Panel();
-            // labelConfigJsonPath = new Label();
-            // textBoxConfigJsonPath = new TextBox();
-            // buttonSelectConfigJsonPath = new Button();
+            labelConfigJsonPath = new Label();
+            textBoxConfigJsonPath = new TextBox();
+            buttonSelectConfigJsonPath = new Button();
             labelDrivePath = new Label();
             textBoxDriveFolder = new TextBox();
             buttonSelectDriveFolder = new Button();
-            // buttonCreateDefaultConfig = new Button();
+            buttonCreateDefaultConfig = new Button();
             savePanel = new Panel();
             topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPathStatus).BeginInit();
@@ -145,13 +145,13 @@ namespace Drive_Extender
             // tabDriveSettings
             // 
             tabDriveSettings.Controls.Add(panelSeparator);
-            // tabDriveSettings.Controls.Add(labelConfigJsonPath);
-            // tabDriveSettings.Controls.Add(textBoxConfigJsonPath);
-            // tabDriveSettings.Controls.Add(buttonSelectConfigJsonPath);
+            tabDriveSettings.Controls.Add(labelConfigJsonPath);
+            tabDriveSettings.Controls.Add(textBoxConfigJsonPath);
+            tabDriveSettings.Controls.Add(buttonSelectConfigJsonPath);
             tabDriveSettings.Controls.Add(labelDrivePath);
             tabDriveSettings.Controls.Add(textBoxDriveFolder);
             tabDriveSettings.Controls.Add(buttonSelectDriveFolder);
-            // tabDriveSettings.Controls.Add(buttonCreateDefaultConfig);
+            tabDriveSettings.Controls.Add(buttonCreateDefaultConfig);
             tabDriveSettings.Location = new Point(4, 24);
             tabDriveSettings.Name = "tabDriveSettings";
             tabDriveSettings.Padding = new Padding(3);
@@ -170,29 +170,29 @@ namespace Drive_Extender
             // 
             // labelConfigJsonPath
             // 
-            // labelConfigJsonPath.AutoSize = true;
-            // labelConfigJsonPath.Location = new Point(8, 8);
-            // labelConfigJsonPath.Name = "labelConfigJsonPath";
-            // labelConfigJsonPath.Size = new Size(142, 15);
-            // labelConfigJsonPath.TabIndex = 3;
-            // labelConfigJsonPath.Text = "Configuration JSON Path:";
+            labelConfigJsonPath.AutoSize = true;
+            labelConfigJsonPath.Location = new Point(8, 8);
+            labelConfigJsonPath.Name = "labelConfigJsonPath";
+            labelConfigJsonPath.Size = new Size(142, 15);
+            labelConfigJsonPath.TabIndex = 3;
+            labelConfigJsonPath.Text = "Configuration JSON Path:";
             // 
             // textBoxConfigJsonPath
             // 
-            // textBoxConfigJsonPath.Location = new Point(8, 26);
-            // textBoxConfigJsonPath.Name = "textBoxConfigJsonPath";
-            // textBoxConfigJsonPath.Size = new Size(464, 23);
-            // textBoxConfigJsonPath.TabIndex = 4;
+            textBoxConfigJsonPath.Location = new Point(8, 26);
+            textBoxConfigJsonPath.Name = "textBoxConfigJsonPath";
+            textBoxConfigJsonPath.Size = new Size(464, 23);
+            textBoxConfigJsonPath.TabIndex = 4;
             // 
             // buttonSelectConfigJsonPath
             // 
-            // buttonSelectConfigJsonPath.Location = new Point(478, 21);
-            // buttonSelectConfigJsonPath.Name = "buttonSelectConfigJsonPath";
-            // buttonSelectConfigJsonPath.Size = new Size(150, 30);
-            // buttonSelectConfigJsonPath.TabIndex = 5;
-            // buttonSelectConfigJsonPath.Text = "Select JSON Path";
-            // buttonSelectConfigJsonPath.UseVisualStyleBackColor = true;
-            // buttonSelectConfigJsonPath.Click += ButtonSelectConfigJsonPath_Click;
+            buttonSelectConfigJsonPath.Location = new Point(478, 21);
+            buttonSelectConfigJsonPath.Name = "buttonSelectConfigJsonPath";
+            buttonSelectConfigJsonPath.Size = new Size(150, 30);
+            buttonSelectConfigJsonPath.TabIndex = 5;
+            buttonSelectConfigJsonPath.Text = "Select JSON Path";
+            buttonSelectConfigJsonPath.UseVisualStyleBackColor = true;
+            buttonSelectConfigJsonPath.Click += ButtonSelectConfigJsonPath_Click;
             // 
             // labelDrivePath
             // 
@@ -222,13 +222,13 @@ namespace Drive_Extender
             // 
             // buttonCreateDefaultConfig
             // 
-            // buttonCreateDefaultConfig.Location = new Point(634, 21);
-            // buttonCreateDefaultConfig.Name = "buttonCreateDefaultConfig";
-            // buttonCreateDefaultConfig.Size = new Size(150, 30);
-            // buttonCreateDefaultConfig.TabIndex = 7;
-            // buttonCreateDefaultConfig.Text = "Create Default Config";
-            // buttonCreateDefaultConfig.UseVisualStyleBackColor = true;
-            // buttonCreateDefaultConfig.Click += ButtonCreateDefaultConfig_Click;
+            buttonCreateDefaultConfig.Location = new Point(634, 21);
+            buttonCreateDefaultConfig.Name = "buttonCreateDefaultConfig";
+            buttonCreateDefaultConfig.Size = new Size(150, 30);
+            buttonCreateDefaultConfig.TabIndex = 7;
+            buttonCreateDefaultConfig.Text = "Create Default Config";
+            buttonCreateDefaultConfig.UseVisualStyleBackColor = true;
+            buttonCreateDefaultConfig.Click += ButtonCreateDefaultConfig_Click;
             // 
             // savePanel
             // 

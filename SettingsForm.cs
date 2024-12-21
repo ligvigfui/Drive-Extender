@@ -37,15 +37,15 @@ namespace Drive_Extender
             }
         }
 
-        // void ButtonSelectConfigJsonPath_Click(object sender, EventArgs e)
-        // {
-        //     using var folderDialog = new OpenFileDialog();
-        //     folderDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
-        //     if (folderDialog.ShowDialog() == DialogResult.OK)
-        //     {
-        //         textBoxConfigJsonPath.Text = folderDialog.FileName;
-        //     }
-        // }
+        void ButtonSelectConfigJsonPath_Click(object sender, EventArgs e)
+        {
+            using var folderDialog = new OpenFileDialog();
+            folderDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxConfigJsonPath.Text = folderDialog.FileName;
+            }
+        }
 
         void ButtonSaveOpenTab_Click(object sender, EventArgs e)
         {
@@ -63,13 +63,13 @@ namespace Drive_Extender
         void SaveDriveSettings()
         {
             List<string> errors = [];
-            // if (!File.Exists(textBoxConfigJsonPath.Text))
-            //     errors.Add(InvalidPath("JSON Configuration file"));
+            if (!File.Exists(textBoxConfigJsonPath.Text))
+                errors.Add(InvalidPath("JSON Configuration file"));
             if (!Directory.Exists(textBoxDriveFolder.Text))
                 errors.Add(InvalidPath("drive folder"));
             if (errors.Count > 0)
             {
-                ShowErrorBox(string.join("\n", errors));
+                ShowErrorBox(string.Join("\n", errors));
                 return;
             }
             SaveSuccess();
@@ -104,16 +104,16 @@ namespace Drive_Extender
             pictureBoxPathStatus.Image = null;
         }
 
-        // void ButtonCreateDefaultConfig_Click(object sender, EventArgs e)
-        // {
-        //     using var folderDialog = new FolderBrowserDialog();
-        //     if (folderDialog.ShowDialog() == DialogResult.OK)
-        //     {
-        //         var defaultConfigPath = Path.Combine(folderDialog.SelectedPath, "defaultConfig.json");
-        //         File.WriteAllText(defaultConfigPath, "{ \"default\": \"config\" }");
-        //         textBoxConfigJsonPath.Text = defaultConfigPath;
-        //         MessageBox.Show("Default configuration created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //     }
-        // }
+        void ButtonCreateDefaultConfig_Click(object sender, EventArgs e)
+        {
+            using var folderDialog = new FolderBrowserDialog();
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                var defaultConfigPath = Path.Combine(folderDialog.SelectedPath, "defaultConfig.json");
+                File.WriteAllText(defaultConfigPath, "{ \"default\": \"config\" }");
+                textBoxConfigJsonPath.Text = defaultConfigPath;
+                MessageBox.Show("Default configuration created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
