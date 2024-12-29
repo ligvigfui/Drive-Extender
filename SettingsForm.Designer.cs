@@ -47,7 +47,6 @@ namespace Drive_Extender
             labelDrivePath = new Label();
             textBoxDriveFolder = new TextBox();
             buttonSelectDriveFolder = new Button();
-            buttonCreateDefaultConfig = new Button();
             savePanel = new Panel();
             topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPathStatus).BeginInit();
@@ -219,16 +218,6 @@ namespace Drive_Extender
             buttonSelectDriveFolder.Text = "Select Drive Folder";
             buttonSelectDriveFolder.UseVisualStyleBackColor = true;
             buttonSelectDriveFolder.Click += ButtonSelectDriveFolder_Click;
-            // 
-            // buttonCreateDefaultConfig
-            // 
-            buttonCreateDefaultConfig.Location = new Point(634, 21);
-            buttonCreateDefaultConfig.Name = "buttonCreateDefaultConfig";
-            buttonCreateDefaultConfig.Size = new Size(150, 30);
-            buttonCreateDefaultConfig.TabIndex = 7;
-            buttonCreateDefaultConfig.Text = "Create Default Config";
-            buttonCreateDefaultConfig.UseVisualStyleBackColor = true;
-            buttonCreateDefaultConfig.Click += ButtonCreateDefaultConfig_Click;
             // 
             // savePanel
             // 
